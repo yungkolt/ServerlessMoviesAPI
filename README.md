@@ -1,24 +1,30 @@
-Serverless Movies API
-A serverless API that provides movie information and allows users to filter movies by release year. This project is built using AWS serverless services including Lambda, DynamoDB, API Gateway, and S3 for storage.
+# Serverless Movies API
+**A serverless API that provides movie information and allows users to filter movies by release year. This project is built using AWS serverless services including Lambda, DynamoDB, API Gateway, and S3 for storage.**
 
-Features
-GetMovies: Retrieves a list of all movies in the database, with details such as title, release year, genre, and cover image.
-GetMoviesByYear: Filters movies by release year, returning only those released in a specified year.
-Architecture
+## Features
+- GetMovies: Retrieves a list of all movies in the database, with details such as title, release year, genre, and cover image.
+
+- GetMoviesByYear: Filters movies by release year, returning only those released in a specified year.
+
+## Architecture
 The project uses an AWS serverless stack:
 
-AWS Lambda: Handles business logic for each API endpoint.
-AWS DynamoDB: Stores movie information in a NoSQL database.
-AWS S3: Stores movie cover images.
-API Gateway: Manages HTTP requests and routes them to the appropriate Lambda functions.
+- AWS Lambda: Handles business logic for each API endpoint.
+
+- AWS DynamoDB: Stores movie information in a NoSQL database.
+
+- AWS S3: Stores movie cover images.
+
+- API Gateway: Manages HTTP requests and routes them to the appropriate Lambda functions.
+
 <!-- (optional) Add a diagram if available -->
 
-API Endpoints
-GetMovies
-Endpoint: /GetMovies
-Method: GET
-Description: Returns a JSON list of all movies.
-Sample Response:
+## API Endpoints
+### GetMovies
+- Endpoint: /GetMovies
+- Method: GET
+- Description: Returns a JSON list of all movies.
+- Sample Response:
 JSON
 
 [
@@ -35,14 +41,13 @@ JSON
         "coverUrl": "https://example-bucket.s3.amazonaws.com/dark-knight.jpg"
     }
 ]
-AI-generated code. Review and use carefully. More info on FAQ.
-GetMoviesByYear
-Endpoint: /getmoviesbyyear/{year}
-Method: GET
-Description: Filters movies by the specified release year.
-Path Parameter: year (e.g., 2010)
-Sample Request: GET /getmoviesbyyear/2010
-Sample Response:
+### GetMoviesByYear
+- Endpoint: /getmoviesbyyear/{year}
+- Method: GET
+- Description: Filters movies by the specified release year.
+- Path Parameter: year (e.g., 2010)
+- Sample Request: GET /getmoviesbyyear/2010
+- Sample Response:
 JSON
 
 [
@@ -53,8 +58,10 @@ JSON
         "coverUrl": "https://example-bucket.s3.amazonaws.com/inception.jpg"
     }
 ]
-AI-generated code. Review and use carefully. More info on FAQ.
-Setup and Installation
+## Setup and Installation
+### Prerequisites
+AWS CLI must be installed and configured with credentials (`aws configure`).
+A valid S3 bucket in your AWS account.
 Clone the Repository
 git clone https://github.com/yourusername/ServerlessMoviesAPI.git
 cd ServerlessMoviesAPI
@@ -99,5 +106,3 @@ If you’d like to contribute, please fork the repository and make your changes 
 
 License
 This project is licensed under the MIT License. See LICENSE for more details.
-
-Feel free to adjust any sections as needed! If you have any other requests or need further assistance, just let me know. 😊
