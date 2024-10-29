@@ -19,8 +19,8 @@ Endpoint: /GetMovies
 Method: GET
 Description: Returns a JSON list of all movies.
 Sample Response:
-json
-Copy code
+JSON
+
 [
     {
         "title": "Inception",
@@ -35,6 +35,7 @@ Copy code
         "coverUrl": "https://example-bucket.s3.amazonaws.com/dark-knight.jpg"
     }
 ]
+AI-generated code. Review and use carefully. More info on FAQ.
 GetMoviesByYear
 Endpoint: /getmoviesbyyear/{year}
 Method: GET
@@ -42,8 +43,8 @@ Description: Filters movies by the specified release year.
 Path Parameter: year (e.g., 2010)
 Sample Request: GET /getmoviesbyyear/2010
 Sample Response:
-json
-Copy code
+JSON
+
 [
     {
         "title": "Inception",
@@ -52,43 +53,40 @@ Copy code
         "coverUrl": "https://example-bucket.s3.amazonaws.com/inception.jpg"
     }
 ]
+AI-generated code. Review and use carefully. More info on FAQ.
 Setup and Installation
 Clone the Repository
-
-bash
-Copy code
 git clone https://github.com/yourusername/ServerlessMoviesAPI.git
 cd ServerlessMoviesAPI
+
 Configure AWS CLI
-
 Make sure to configure your AWS CLI with appropriate credentials:
-bash
-Copy code
+
 aws configure
+
 Environment Variables
-
 Set up environment variables in AWS Lambda for your database, S3 bucket, and other configurations.
+
 Deploy Lambda Functions
-
 Deploy Lambda functions through the AWS console or use the AWS SDK for automated deployment.
+
 Create API Gateway Routes
-
 Set up routes in API Gateway to point to each Lambda function.
-Add Sample Data to DynamoDB
 
+Add Sample Data to DynamoDB
 Populate DynamoDB with sample movie data (title, release year, genre, cover URL).
+
 Usage
 Example Curl Requests
 GetMovies
-
-bash
-Copy code
 curl -X GET https://yourapi.com/GetMovies
+
 GetMoviesByYear
+curl -X GET https://yourapi.com/getmoviesbyyear/2010
 
 Testing
-You can test the API using tools like Postman or by making requests directly with curl.
-To validate the data returned from DynamoDB, use the AWS Console to inspect stored items.
+You can test the API using tools like Postman or by making requests directly with curl. To validate the data returned from DynamoDB, use the AWS Console to inspect stored items.
+
 Tech Stack
 Languages: Python (for Lambda functions)
 AWS Services:
@@ -97,7 +95,9 @@ S3 - Stores movie cover images.
 Lambda - Serverless compute service to run the API logic.
 API Gateway - Manages the API endpoints.
 Contributing
-If you'd like to contribute, please fork the repository and make your changes in a branch. Once you've tested your changes, submit a pull request for review.
+If you’d like to contribute, please fork the repository and make your changes in a branch. Once you’ve tested your changes, submit a pull request for review.
 
 License
 This project is licensed under the MIT License. See LICENSE for more details.
+
+Feel free to adjust any sections as needed! If you have any other requests or need further assistance, just let me know. 😊
