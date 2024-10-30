@@ -21,13 +21,13 @@ The project uses an AWS serverless stack:
 
 ## API Endpoints
 ### GetMovies
-- Endpoint: /GetMovies
-- Method: GET
-- Description: Returns a JSON list of all movies.
+- Endpoint: `/GetMovies`
+- Method: `GET`
+- Description: `Return a JSON list of all movies.`
 - Sample Response:
-JSON
-
-[
+`JSON`
+    ```json
+    [
     {
         "title": "Inception",
         "releaseYear": "2010",
@@ -40,69 +40,73 @@ JSON
         "genre": "Action, Crime, Drama",
         "coverUrl": "https://example-bucket.s3.amazonaws.com/dark-knight.jpg"
     }
-]
+    ]
 ### GetMoviesByYear
-- Endpoint: /getmoviesbyyear/{year}
-- Method: GET
-- Description: Filters movies by the specified release year.
-- Path Parameter: year (e.g., 2010)
-- Sample Request: GET /getmoviesbyyear/2010
+- Endpoint: `/GetMoviesByYear/{year}`
+- Method: `GET`
+- Description: `Filters movies by the specified release year.`
+- Path Parameter: `year (e.g, 2010)`
+- Sample Request: `GET /GetMoviesByYear/2010`
 - Sample Response:
-JSON
-
-[
+  `JSON`
+    ```json
+    [
     {
         "title": "Inception",
         "releaseYear": "2010",
         "genre": "Science Fiction, Action",
         "coverUrl": "https://example-bucket.s3.amazonaws.com/inception.jpg"
     }
-]
+    ]
+
 ## Setup and Installation
 ### Prerequisites
-AWS CLI must be installed and configured with credentials (`aws configure`).
-A valid S3 bucket in your AWS account.
-Clone the Repository
-git clone https://github.com/yourusername/ServerlessMoviesAPI.git
-cd ServerlessMoviesAPI
+- AWS CLI must be installed and configured with credentials (`aws configure`).
+- A valid S3 bucket in your AWS account.
+1. **Clone the Repository**
+    ```bash
+    git clone https://github.com/yourusername/ServerlessMoviesAPI.git
+    cd ServerlessMoviesAPI
+    
+2. **Configure AWS CLI**
+- Make sure to configure your AWS CLI with appropriate credentials:
+    ```bash
+    aws configure
 
-Configure AWS CLI
-Make sure to configure your AWS CLI with appropriate credentials:
 
-aws configure
+3. **Deploy Lambda Functions**
+- Deploy Lambda Functions through the AWS console or use the AWS SDK for automated deployment.
+  
+- Set up environment variables in AWS Lambda for your database, S3 bucket, and other configurations.
 
-Environment Variables
-Set up environment variables in AWS Lambda for your database, S3 bucket, and other configurations.
+4. **Create API Gateway Routes**
+- Set up routes in API Gateway to point to each Lambda function.
 
-Deploy Lambda Functions
-Deploy Lambda functions through the AWS console or use the AWS SDK for automated deployment.
+5. **Add Sample Data to DynamoDB**
+- Populate DynamoDB with sample movie data (title, release year, genre, cover URL).
 
-Create API Gateway Routes
-Set up routes in API Gateway to point to each Lambda function.
+## Usage
+### Example Curl Requests
+- GetMovies
+      
+        curl -X GET https://yourapi.com/GetMovies
+- GetMoviesByYear
 
-Add Sample Data to DynamoDB
-Populate DynamoDB with sample movie data (title, release year, genre, cover URL).
+        curl -X GET https://yourapi.com/getmoviesbyyear/2010
 
-Usage
-Example Curl Requests
-GetMovies
-curl -X GET https://yourapi.com/GetMovies
+## Testing
+- You can test the API using tools like Postman or by making requests directly with curl. To validate the data returned from DynamoDB, use the AWS Console to inspect stored items.
 
-GetMoviesByYear
-curl -X GET https://yourapi.com/getmoviesbyyear/2010
-
-Testing
-You can test the API using tools like Postman or by making requests directly with curl. To validate the data returned from DynamoDB, use the AWS Console to inspect stored items.
-
-Tech Stack
-Languages: Python (for Lambda functions)
-AWS Services:
-DynamoDB - NoSQL database for storing movie data.
-S3 - Stores movie cover images.
-Lambda - Serverless compute service to run the API logic.
-API Gateway - Manages the API endpoints.
-Contributing
+## Tech Stack
+### Languages: 
+- Python (for Lambda functions)
+### AWS Services:
+- DynamoDB - NoSQL database for storing movie data.
+- S3 - Stores movie cover images.
+- Lambda - Serverless compute service to run the API logic.
+- API Gateway - Manages the API endpoints.
+## Contributing
 If you’d like to contribute, please fork the repository and make your changes in a branch. Once you’ve tested your changes, submit a pull request for review.
 
-License
+## License
 This project is licensed under the MIT License. See LICENSE for more details.
