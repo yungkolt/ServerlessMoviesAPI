@@ -2,20 +2,20 @@
 **A serverless API that provides movie information and allows users to filter movies by release year. This project is built using AWS serverless services including Lambda, DynamoDB, API Gateway, and S3 for storage.**
 
 ## Features
-- GetMovies: Retrieves a list of all movies in the database, with details such as title, release year, genre, and cover image.
+- **GetMovies:** Retrieves a list of all movies in the database, with details such as title, release year, genre, and cover image.
 
-- GetMoviesByYear: Filters movies by release year, returning only those released in a specified year.
+- **GetMoviesByYear:** Filters movies by release year, returning only those released in a specified year.
 
 ## Architecture
 The project uses an AWS serverless stack:
 
-- AWS Lambda: Handles business logic for each API endpoint.
+- **AWS Lambda:** Handles business logic for each API endpoint.
 
-- AWS DynamoDB: Stores movie information in a NoSQL database.
+- **AWS DynamoDB:** Stores movie information in a NoSQL database.
 
-- AWS S3: Stores movie cover images.
+- **AWS S3:** Stores movie cover images.
 
-- API Gateway: Manages HTTP requests and routes them to the appropriate Lambda functions.
+- **API Gateway:** Manages HTTP requests and routes them to the appropriate Lambda functions.
 
 <!-- (optional) Add a diagram if available -->
 
