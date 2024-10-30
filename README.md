@@ -100,12 +100,12 @@ The project uses an AWS serverless stack:
 
 ## Tech Stack
 ### Languages: 
-- Python (for Lambda functions)
+- **Python** (for Lambda functions)
 ### AWS Services:
-- DynamoDB - NoSQL database for storing movie data.
-- S3 - Stores movie cover images.
-- Lambda - Serverless compute service to run the API logic.
-- API Gateway - Manages the API endpoints.
+- **DynamoDB** - NoSQL database for storing movie data.
+- **S3** - Stores movie cover images.
+- **Lambda** - Serverless compute service to run the API logic.
+- **API Gateway** - Manages the API endpoints.
 ## Contributing
 If you’d like to contribute, please fork the repository and make your changes in a branch. Once you’ve tested your changes, submit a pull request for review.
 
