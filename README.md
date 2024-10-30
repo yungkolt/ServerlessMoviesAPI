@@ -17,7 +17,8 @@ The project uses an AWS serverless stack:
 
 - **API Gateway:** Manages HTTP requests and routes them to the appropriate Lambda functions.
 
-<!-- (optional) Add a diagram if available -->
+![image](https://github.com/user-attachments/assets/b2e171d7-11dd-4e98-9e41-12e4180b0ccb)
+
 
 ## API Endpoints
 ### GetMovies
