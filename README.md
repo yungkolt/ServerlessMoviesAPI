@@ -22,10 +22,10 @@ This project uses an AWS serverless stack:
 
 ## API Endpoints
 ### GetMovies
-- Endpoint: `/GetMovies`
-- Method: `GET`
-- Description: `Return a JSON list of all movies.`
-- Sample Response:
+- **Endpoint:** `/GetMovies`
+- **Method:** `GET`
+- **Description:** `Return a JSON list of all movies.`
+- **Sample Response:**
 `JSON`
     ```json
     [
@@ -43,12 +43,12 @@ This project uses an AWS serverless stack:
     }
     ]
 ### GetMoviesByYear
-- Endpoint: `/GetMoviesByYear/{year}`
-- Method: `GET`
-- Description: `Filters movies by the specified release year.`
-- Path Parameter: `year (e.g, 2010)`
-- Sample Request: `GET /GetMoviesByYear/2010`
-- Sample Response:
+- **Endpoint:** `/GetMoviesByYear/{year}`
+- **Method:** `GET`
+- **Description:** `Filters movies by the specified release year.`
+- **Path Parameter:** `year (e.g, 2010)`
+- **Sample Request:** `GET /GetMoviesByYear/2010`
+- **Sample Response:**
   `JSON`
     ```json
     [
@@ -61,12 +61,9 @@ This project uses an AWS serverless stack:
     ]
 
 ## Setup and Installation
-### Prerequisites
-- AWS CLI must be installed and configured with credentials (`aws configure`).
-- A valid S3 bucket in your AWS account.
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/yourusername/ServerlessMoviesAPI.git
+    git clone https://github.com/yungkolt/ServerlessMoviesAPI.git
     cd ServerlessMoviesAPI
     
 2. **Configure AWS CLI**
